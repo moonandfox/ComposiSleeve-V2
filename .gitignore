@@ -1,0 +1,14 @@
+node_modules
+.env
+.env.*
+.sass-cache
+.build
+tmp
+
+# images
+web_files/images/*.png
+web_files/images/*.ico
+web_files/images/*.jpg
+web_files/images/*.gif
+
+# javascript
