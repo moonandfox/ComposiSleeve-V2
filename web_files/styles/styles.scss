@@ -1,0 +1,17 @@
+
+@import "partials/base.scss";
+@import "partials/grid.scss";
+@import "partials/_mixins-functions.scss";
+@import "partials/css-resets.scss";
+
+html{
+	font-size: 16px;
+}
+
+body{
+	font-size: 62.5%;
+}
+
+h1{
+	font-size: em(30);
+}
