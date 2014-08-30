@@ -9,10 +9,11 @@ CMD.bat
 
 # images
 images/*
-web_files/images/*.png
-web_files/images/*.ico
-web_files/images/*.jpg
-web_files/images/*.gif
+web_files/images
 favicon.ico
+
+#fonts
+fonts/*
+web_files/fonts
 
 # javascript

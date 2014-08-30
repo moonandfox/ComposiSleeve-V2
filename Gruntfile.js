@@ -27,6 +27,14 @@ module.exports = function(grunt) {
           src: ['web_files/images/**'],
           dest: 'images/'
         }]
+      },
+      fonts: {
+        files: [{
+          flatten: true,
+          expand: true,
+          src: ['web_files/fonts/**'],
+          dest: 'fonts/'
+        }]
       }
     },
     // grunt-contrib-sass
@@ -74,12 +82,16 @@ module.exports = function(grunt) {
         files: ['web_files/images/*'],
         tasks: ['copy:images']
       },
+      fonts: {
+        files: ['web_files/fonts/*'],
+        tasks: ['copy:fonts']
+      },
       sass: {
         files: ['web_files/**/*.scss'],
         tasks: ['css'],
       },
       ftp: {
-        files: ['web_files/*.html', 'web_files/styles/*.css', 'web_files/images/*.*'],
+        files: ['web_files/*.html', 'web_files/styles/*.css', 'web_files/images/*.*', 'web_files/javascript/*'],
         tasks: ['ftpush'],
       }
     }

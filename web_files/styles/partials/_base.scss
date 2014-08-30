@@ -1,1 +1,68 @@
 $site-width: 1000;
+
+$desktop-slim-max-width: 1026px;
+$desktop-slim-min-width: 768px;
+$tablet-landscape-max-width: 797px;
+$tablet-landscape-min-width: 600px;
+$mobile-landscape-max-width: 629px;
+$mobile-landscape-min-width: 510px;
+$mobile-portrait-max-width: 509px;
+
+@font-face {
+    font-family: 'oswald';
+    src: url('../fonts/oswald-regular-webfont.eot');
+    src: url('../fonts/oswald-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/oswald-regular-webfont.woff') format('woff'),
+         url('../fonts/oswald-regular-webfont.ttf') format('truetype'),
+         url('../fonts/oswald-regular-webfont.svg#oswaldbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'oswald';
+    src: url('../fonts/oswald-light-webfont.eot');
+    src: url('../fonts/oswald-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/oswald-light-webfont.woff') format('woff'),
+         url('../fonts/oswald-light-webfont.ttf') format('truetype'),
+         url('../fonts/oswald-light-webfont.svg#oswaldlight') format('svg');
+    font-weight: lighter;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'oswald';
+    src: url('../fonts/oswald-bold-webfont.eot');
+    src: url('../fonts/oswald-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/oswald-bold-webfont.woff') format('woff'),
+         url('../fonts/oswald-bold-webfont.ttf') format('truetype'),
+         url('../fonts/oswald-bold-webfont.svg#oswaldbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+//padding for middle content
+$content-padding: 6%;
+
+//fonts
+$headline-font: oswald, Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$reading-font: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+
+//colors
+$bg-light: #ffffff;
+$bg-med: #f3f2f2;
+$bg-dark: #363535;
+$light-text: #ffffff;
+$dark-text: #1a1919;
+$color-text: #02827d;
+
+//responsive media
+img,
+embed,
+object,
+video{
+    max-width: 100%;
+}

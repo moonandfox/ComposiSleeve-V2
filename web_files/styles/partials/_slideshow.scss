@@ -1,0 +1,70 @@
+
+.slideshow{
+  background-color: $bg-med;
+  padding-left: $content-padding;
+	padding-right: $content-padding;
+	padding-bottom: 0.5%;
+}
+
+.ss-image{
+	float:left;
+}
+
+.ss-text{
+	float:right;
+	padding: 2% 6% 0 0;
+}
+
+.ss-title{
+	font: lighter 3em/150% $headline-font;
+	text-transform: uppercase;
+	line-height: 1.2em;
+}
+
+@media only screen and(max-width: $desktop-slim-max-width){
+	.ss-text{
+		padding: 5px 10px 10px 5px;
+	}
+	.ss-title{
+		font-size:2.5em;
+	}
+	.ss-description{
+		margin-bottom: 5px;
+		font-size: 1.5em;
+	}
+}
+
+@media only screen and(max-width: $tablet-landscape-max-width){
+	.slideshow{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.flex-direction-nav{
+		display: none;
+	}
+	.ss-title{
+		font-size: 2em;
+	}
+	.ss-description{
+		margin-bottom: 5px;
+		font-size: 1.2em;
+	}
+	.ss-text a.color-link{
+		font-size: 1.2em;
+	}
+}
+
+@media only screen and (max-width: $mobile-landscape-max-width){
+	.ss-title{
+			font-size: 1.7em;
+		}
+}
+
+@media only screen and(max-width: $mobile-portrait-max-width){
+	.ss-text{
+		display: none;
+	}
+	.ss-image{
+		width: 100%;
+	}
+}
