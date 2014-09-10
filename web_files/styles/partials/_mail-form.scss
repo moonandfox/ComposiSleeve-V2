@@ -1,0 +1,32 @@
+#mc_embed_signup{
+	background: #dbdbdb;
+	width: 20%;
+	float: right;
+	padding-right: 1%;
+}
+#mc_embed_signup .button{
+	background-color: $color-text;
+	font-family: $headline-font;
+	font-weight: lighter;
+	font-size: 2em;
+	width: auto;
+	padding: 0 5px;
+	text-transform: lowercase;
+	float: right;
+}
+
+#mc_embed_signup input.email{
+	display: inline-block;
+	margin-right: 0;
+	width:85%;
+	border-color: #cdcccc;
+	padding: 5px 0;
+}
+
+@media only screen and (max-width: $desktop-slim-min-width){
+	#mc_embed_signup{
+		width: 50%;
+		clear: both;
+		float: left;
+	}
+}

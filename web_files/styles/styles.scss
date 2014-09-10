@@ -4,6 +4,7 @@
 @import "partials/_mixins-functions.scss";
 @import "partials/css-resets.scss";
 @import "partials/slideshow.scss";
+@import "partials/mail-form.scss";
 
 html{
 	font-size: 16px;
@@ -132,6 +133,45 @@ nav{
     border-left: 0px;
 }
 
+footer{
+	@extend %clearfix;
+	background-color: $bg-dark;
+	padding: 10px 2%;
+	h3{
+		color: $color-text2;
+	}
+
+	p{
+		color: $light-text;
+		font-size: 1.4em;
+		line-height: 150%;
+	}
+
+	ul li a{
+		@extend p;
+		&:hover{
+			color: darken( $light-text, 15% );
+		}
+	}
+	.phone{
+		font-family: $headline-font;
+	}
+}
+
+img.right-image{
+	float: right;
+	width: 33%;
+	}
+
+.mail-thanks{
+	@extend .centered-page;
+	min-height: 400px;
+	margin-top: 5%;
+	a.color-link{
+		float: left;
+	}
+}
+
 @media only screen and(max-width: $desktop-slim-max-width){
 	.span4.logo, .span4.affiliate-links{
 		width: 100%;
@@ -170,6 +210,10 @@ nav{
 	.info-box{
 		width: 32%;
 	}
+	
+	.mail-thanks{
+		min-height: 150px;
+	}
 }
 
 @media only screen and (max-width: $mobile-landscape-max-width){
@@ -187,25 +231,42 @@ nav{
 		width: 100%;
 		float: left;
 	}
+
 	.top-to-bottom {
 		border-bottom: 2px solid white;
     border-image: linear-gradient(to bottom, white, white)0 0 100% 0;
 	}
+
 	.content-section{
 		@extend %clearfix;
 		padding: 1% $content-padding .5% $content-padding;
 	}
+
 	.bottom-content{
 		margin-top: 5%;
 	}
+
 	.info-box{
 		padding-bottom: 15px;
 	}
+
 	.info-box:not(:first-child) {
     padding-left: 0;
 	}
+
 	.info-box:last-child {
     border-bottom: 0;
+	}
+	img.right-image{
+		float: none;
+		width: 100%;
+	}
+	.mail-thanks{
+		width: 100%;
+		text-align: center;
+	}
+	.footerbox{
+		margin-bottom: 20px;
 	}
 }
 

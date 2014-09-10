@@ -27,7 +27,7 @@ video {
 
 .grid {
   background: white;
-  margin: 0 0 2% 0; }
+  margin: 0 0 0 0; }
 
 [class*='span'] {
   float: left;
@@ -70,20 +70,21 @@ video {
 
 @media only screen and (max-width: 629px) {
   .span5, .span6, .span7 {
-    width: 100%; }
+    width: 100%;
+    padding-right: 0; }
 
   .grid [class*='span']:last-of-type {
     padding-right: 2%; } }
 * {
   box-sizing: border-box; }
 
-.grid:after, header:after, .content-section:after {
+.grid:after, header:after, .content-section:after, footer:after {
   content: "";
   display: table;
   clear: both; }
 
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h3, h4, h5, h6, p, blockquote, pre, a,
+h1, h2, h3, h3, h4, h5, h6, p, footer ul li a, blockquote, pre, a,
 abbr, acronym, address, big, cite, code, del,
 dfn, em, img, ins, kbd, q, s, samp, small, strike,
 strong, sub, sup, tt, var, b, u, i, center, dl, dt,
@@ -177,6 +178,34 @@ a {
 
   .ss-image {
     width: 100%; } }
+#mc_embed_signup {
+  background: #dbdbdb;
+  width: 20%;
+  float: right;
+  padding-right: 1%; }
+
+#mc_embed_signup .button {
+  background-color: #02827d;
+  font-family: oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: lighter;
+  font-size: 2em;
+  width: auto;
+  padding: 0 5px;
+  text-transform: lowercase;
+  float: right; }
+
+#mc_embed_signup input.email {
+  display: inline-block;
+  margin-right: 0;
+  width: 85%;
+  border-color: #cdcccc;
+  padding: 5px 0; }
+
+@media only screen and (max-width: 768px) {
+  #mc_embed_signup {
+    width: 50%;
+    clear: both;
+    float: left; } }
 html {
   font-size: 16px; }
 
@@ -198,7 +227,7 @@ h2, h3 {
 h3 {
   font-size: 2em; }
 
-p {
+p, footer ul li a {
   font-size: 1.7em;
   line-height: 120%; }
 
@@ -251,7 +280,7 @@ nav {
 
 .info-box {
   padding-top: 1%; }
-  .info-box p {
+  .info-box p, .info-box footer ul li a, footer ul li .info-box a {
     font-size: 1.4em; }
   .info-box h3 {
     margin-bottom: 3%; }
@@ -274,6 +303,30 @@ nav {
           border-image: linear-gradient(to bottom, white, rgba(0, 0, 0, 0)) 0 100% 0 0;
   border-left: 0px; }
 
+footer {
+  background-color: #363535;
+  padding: 10px 2%; }
+  footer h3 {
+    color: #d8680f; }
+  footer p, footer ul li a {
+    color: white;
+    font-size: 1.4em;
+    line-height: 150%; }
+  footer ul li a:hover {
+    color: #d9d9d9; }
+  footer .phone {
+    font-family: oswald, Arial, "Helvetica Neue", Helvetica, sans-serif; }
+
+img.right-image {
+  float: right;
+  width: 33%; }
+
+.mail-thanks {
+  min-height: 400px;
+  margin-top: 5%; }
+  .mail-thanks a.color-link {
+    float: left; }
+
 @media only screen and (max-width: 1026px) {
   .span4.logo, .span4.affiliate-links {
     width: 100%; }
@@ -283,7 +336,7 @@ nav {
   nav ul {
     font-size: 1.5em; }
 
-  .info-box p {
+  .info-box p, .info-box footer ul li a, footer ul li .info-box a {
     font-size: 1.3em; } }
 @media only screen and (max-width: 797px) {
   h2, h3 {
@@ -292,7 +345,7 @@ nav {
   h3 {
     font-size: 1.7em; }
 
-  p {
+  p, footer ul li a {
     font-size: 1.5em; }
 
   nav {
@@ -303,7 +356,10 @@ nav {
       padding-right: 20px; }
 
   .info-box {
-    width: 32%; } }
+    width: 32%; }
+
+  .mail-thanks {
+    min-height: 150px; } }
 @media only screen and (max-width: 629px) {
   nav {
     line-height: 3em;
@@ -335,12 +391,23 @@ nav {
     padding-left: 0; }
 
   .info-box:last-child {
-    border-bottom: 0; } }
+    border-bottom: 0; }
+
+  img.right-image {
+    float: none;
+    width: 100%; }
+
+  .mail-thanks {
+    width: 100%;
+    text-align: center; }
+
+  .footerbox {
+    margin-bottom: 20px; } }
 @media only screen and (max-width: 509px) {
   h2, h3 {
     font-size: 2em; }
 
-  p {
+  p, footer ul li a {
     font-size: 1.2em; }
 
   .logo img {
