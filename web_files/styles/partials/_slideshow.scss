@@ -16,9 +16,8 @@
 }
 
 .ss-title{
-	font: lighter 3em/150% $headline-font;
+	font: lighter 1.7rem/150% $headline-font;
 	text-transform: uppercase;
-	line-height: 1.2em;
 }
 
 @media only screen and(max-width: $desktop-slim-max-width){
@@ -26,11 +25,11 @@
 		padding: 5px 10px 10px 5px;
 	}
 	.ss-title{
-		font-size:2.5em;
+		font-size:1.3rem;
 	}
 	.ss-description{
 		margin-bottom: 5px;
-		font-size: 1.5em;
+		font-size: 1rem;
 	}
 }
 
@@ -43,20 +42,20 @@
 		display: none;
 	}
 	.ss-title{
-		font-size: 2em;
+		font-size: 1.2rem;
 	}
 	.ss-description{
 		margin-bottom: 5px;
-		font-size: 1.2em;
+		font-size: .9rem;
 	}
 	.ss-text a.color-link{
-		font-size: 1.2em;
+		font-size: .9rem;
 	}
 }
 
 @media only screen and (max-width: $mobile-landscape-max-width){
 	.ss-title{
-			font-size: 1.7em;
+			font-size: 1.3rem;
 		}
 }
 

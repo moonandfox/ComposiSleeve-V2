@@ -43,11 +43,10 @@ $span-width: 0%;
 }
 
 @media only screen and (max-width: $mobile-landscape-max-width){
-  .span5, .span6, .span7{
-    width: 100%;
-    padding-right: 0;
-  }
   [class*='span'] {
+  	width: 100%;
+    padding-right: 0;
+    margin-bottom: 2%;
     .grid &:last-of-type {
       padding-right: $pad;
     }

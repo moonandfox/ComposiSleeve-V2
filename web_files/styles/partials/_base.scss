@@ -1,5 +1,9 @@
 $site-width: 1000;
 
+html{
+    font-size: 16px;
+}
+
 $desktop-slim-max-width: 1026px;
 $desktop-slim-min-width: 768px;
 $tablet-landscape-max-width: 797px;
@@ -66,4 +70,23 @@ embed,
 object,
 video{
     max-width: 100%;
+}
+
+//****responsive fonts media queries****
+@media only screen and(max-width: $desktop-slim-max-width){
+	html{
+    font-size: 15px;
+  }
+ }
+
+@media only screen and(max-width: $tablet-landscape-max-width){
+	html{
+    font-size: 14px;
+  }
+}
+
+@media only screen and(max-width: $mobile-landscape-max-width){
+	html{
+		font-size: 15px;
+	}
 }

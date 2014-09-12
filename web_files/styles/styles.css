@@ -1,84 +1,7 @@
-@font-face {
-  font-family: 'oswald';
-  src: url("../fonts/oswald-regular-webfont.eot");
-  src: url("../fonts/oswald-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-regular-webfont.woff") format("woff"), url("../fonts/oswald-regular-webfont.ttf") format("truetype"), url("../fonts/oswald-regular-webfont.svg#oswaldbook") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'oswald';
-  src: url("../fonts/oswald-light-webfont.eot");
-  src: url("../fonts/oswald-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-light-webfont.woff") format("woff"), url("../fonts/oswald-light-webfont.ttf") format("truetype"), url("../fonts/oswald-light-webfont.svg#oswaldlight") format("svg");
-  font-weight: lighter;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'oswald';
-  src: url("../fonts/oswald-bold-webfont.eot");
-  src: url("../fonts/oswald-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-bold-webfont.woff") format("woff"), url("../fonts/oswald-bold-webfont.ttf") format("truetype"), url("../fonts/oswald-bold-webfont.svg#oswaldbold") format("svg");
-  font-weight: bold;
-  font-style: normal; }
-
-img,
-embed,
-object,
-video {
-  max-width: 100%; }
-
-.grid {
-  background: white;
-  margin: 0 0 0 0; }
-
-[class*='span'] {
-  float: left;
-  padding-right: 2%; }
-  .grid [class*='span']:last-of-type {
-    padding-right: 0; }
-  .grid [class*='span']:only-of-type {
-    padding-right: 2%; }
-  .grid [class*='span']:last-of-type.right-pad {
-    padding-right: 2%; }
-
-.span1 {
-  width: 12.5%; }
-
-.span2 {
-  width: 25%; }
-
-.span3 {
-  width: 37.5%; }
-
-.span4 {
-  width: 50%; }
-
-.span5 {
-  width: 62.5%; }
-
-.span6 {
-  width: 75%; }
-
-.span7 {
-  width: 87.5%; }
-
-.span8 {
-  width: 100%; }
-
-.grid-pad {
-  padding: 2% 0 2% 2%; }
-  .grid-pad [class*='span-']:last-of-type {
-    padding-right: 2%; }
-
-@media only screen and (max-width: 629px) {
-  .span5, .span6, .span7 {
-    width: 100%;
-    padding-right: 0; }
-
-  .grid [class*='span']:last-of-type {
-    padding-right: 2%; } }
 * {
   box-sizing: border-box; }
 
-.grid:after, header:after, .content-section:after, footer:after {
+.grid:after, header:after, .content-section:after, .iframe-container:after, footer:after {
   content: "";
   display: table;
   clear: both; }
@@ -124,6 +47,95 @@ table {
 a {
   text-decoration: none; }
 
+html {
+  font-size: 16px; }
+
+@font-face {
+  font-family: 'oswald';
+  src: url("../fonts/oswald-regular-webfont.eot");
+  src: url("../fonts/oswald-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-regular-webfont.woff") format("woff"), url("../fonts/oswald-regular-webfont.ttf") format("truetype"), url("../fonts/oswald-regular-webfont.svg#oswaldbook") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'oswald';
+  src: url("../fonts/oswald-light-webfont.eot");
+  src: url("../fonts/oswald-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-light-webfont.woff") format("woff"), url("../fonts/oswald-light-webfont.ttf") format("truetype"), url("../fonts/oswald-light-webfont.svg#oswaldlight") format("svg");
+  font-weight: lighter;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'oswald';
+  src: url("../fonts/oswald-bold-webfont.eot");
+  src: url("../fonts/oswald-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-bold-webfont.woff") format("woff"), url("../fonts/oswald-bold-webfont.ttf") format("truetype"), url("../fonts/oswald-bold-webfont.svg#oswaldbold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+img,
+embed,
+object,
+video {
+  max-width: 100%; }
+
+@media only screen and (max-width: 1026px) {
+  html {
+    font-size: 15px; } }
+@media only screen and (max-width: 797px) {
+  html {
+    font-size: 14px; } }
+@media only screen and (max-width: 629px) {
+  html {
+    font-size: 15px; } }
+.grid {
+  background: white;
+  margin: 0 0 0 0; }
+
+[class*='span'] {
+  float: left;
+  padding-right: 2%; }
+  .grid [class*='span']:last-of-type {
+    padding-right: 0; }
+  .grid [class*='span']:only-of-type {
+    padding-right: 2%; }
+  .grid [class*='span']:last-of-type.right-pad {
+    padding-right: 2%; }
+
+.span1 {
+  width: 12.5%; }
+
+.span2 {
+  width: 25%; }
+
+.span3 {
+  width: 37.5%; }
+
+.span4 {
+  width: 50%; }
+
+.span5 {
+  width: 62.5%; }
+
+.span6 {
+  width: 75%; }
+
+.span7 {
+  width: 87.5%; }
+
+.span8 {
+  width: 100%; }
+
+.grid-pad {
+  padding: 2% 0 2% 2%; }
+  .grid-pad [class*='span-']:last-of-type {
+    padding-right: 2%; }
+
+@media only screen and (max-width: 629px) {
+  [class*='span'] {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 2%; }
+    .grid [class*='span']:last-of-type {
+      padding-right: 2%; } }
 .slideshow {
   background-color: #f3f2f2;
   padding-left: 6%;
@@ -138,20 +150,19 @@ a {
   padding: 2% 6% 0 0; }
 
 .ss-title {
-  font: lighter 3em/150% oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
-  text-transform: uppercase;
-  line-height: 1.2em; }
+  font: lighter 1.7rem/150% oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase; }
 
 @media only screen and (max-width: 1026px) {
   .ss-text {
     padding: 5px 10px 10px 5px; }
 
   .ss-title {
-    font-size: 2.5em; }
+    font-size: 1.3rem; }
 
   .ss-description {
     margin-bottom: 5px;
-    font-size: 1.5em; } }
+    font-size: 1rem; } }
 @media only screen and (max-width: 797px) {
   .slideshow {
     padding-left: 0;
@@ -161,17 +172,17 @@ a {
     display: none; }
 
   .ss-title {
-    font-size: 2em; }
+    font-size: 1.2rem; }
 
   .ss-description {
     margin-bottom: 5px;
-    font-size: 1.2em; }
+    font-size: .9rem; }
 
   .ss-text a.color-link {
-    font-size: 1.2em; } }
+    font-size: .9rem; } }
 @media only screen and (max-width: 629px) {
   .ss-title {
-    font-size: 1.7em; } }
+    font-size: 1.3rem; } }
 @media only screen and (max-width: 509px) {
   .ss-text {
     display: none; }
@@ -206,9 +217,9 @@ a {
     width: 50%;
     clear: both;
     float: left; } }
-html {
-  font-size: 16px; }
-
+@media only screen and (max-width: 509px) {
+  #mc_embed_signup {
+    width: 100%; } }
 body {
   font-size: 62.5%;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -216,24 +227,30 @@ body {
   line-height: 150%; }
 
 h1 {
-  font-size: 3em; }
+  font-size: 3rem; }
 
 h2, h3 {
   font-family: oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
   text-transform: uppercase;
-  font-size: 3em;
+  font-size: 2rem;
   line-height: 150%; }
 
 h3 {
-  font-size: 2em; }
+  font-size: 1.4rem; }
 
 p, footer ul li a {
-  font-size: 1.7em;
+  font-size: 1rem;
   line-height: 120%; }
+
+a {
+  color: #d8680f; }
+
+:not(nav) > ul {
+  line-height: 150%; }
 
 a.color-link {
   color: #02827d;
-  font-size: 1.5em;
+  font-size: 1rem;
   font-style: italic;
   margin-top: 20px;
   float: right; }
@@ -241,6 +258,11 @@ a.color-link {
 header {
   background: #f3f2f2;
   padding: 10px 2%; }
+
+.emphasis-text {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: .8rem; }
 
 .logo img {
   width: 350px; }
@@ -251,11 +273,12 @@ header {
 nav {
   background-color: #363535;
   text-align: right;
-  padding: 10px 15px;
-  padding-right: 15px; }
+  padding: 5px 15px;
+  padding-right: 15px;
+  line-height: 2rem;
+  font-size: 1.3rem; }
   nav ul {
     font-family: oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 2em;
     text-transform: uppercase; }
     nav ul li {
       display: inline;
@@ -267,6 +290,11 @@ nav {
 
 .content-section {
   padding: 1% 6% 0.5% 6%; }
+  .content-section ul {
+    font-size: 1rem; }
+
+ul.content-list {
+  font-size: 1rem; }
 
 .intro {
   margin-bottom: 20px; }
@@ -281,15 +309,15 @@ nav {
 .info-box {
   padding-top: 1%; }
   .info-box p, .info-box footer ul li a, footer ul li .info-box a {
-    font-size: 1.4em; }
+    font-size: .9rem; }
   .info-box h3 {
     margin-bottom: 3%; }
   .info-box ul {
-    font-size: 1.4em; }
+    font-size: .9rem; }
     .info-box ul li {
       padding-top: 15px;
       list-style-position: inside;
-      text-indent: -0.6em; }
+      text-indent: -0.6rem; }
       .info-box ul li:before {
         content: '- '; }
 
@@ -303,6 +331,49 @@ nav {
           border-image: linear-gradient(to bottom, white, rgba(0, 0, 0, 0)) 0 100% 0 0;
   border-left: 0px; }
 
+img.right-image {
+  float: right;
+  width: 33%; }
+
+.side-nav {
+  background-color: #f3f2f2;
+  margin-right: 2%;
+  min-height: 470px;
+  padding: 0% 1%; }
+  .side-nav ul li {
+    padding: 8% 0;
+    border-bottom: 1px solid white;
+    text-transform: uppercase;
+    font-size: .8rem; }
+  .side-nav a {
+    color: #02827d; }
+    .side-nav a:hover {
+      color: #013735; }
+  .side-nav select {
+    display: none; }
+
+.uses ul {
+  list-style-type: circle;
+  list-style-position: inside;
+  text-indent: -0.9rem; }
+
+.info-section {
+  padding: 5% 0;
+  border-bottom: 1px dashed #1a1919; }
+
+.iframe-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 45px;
+  height: 0;
+  overflow: hidden; }
+  .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
 footer {
   background-color: #363535;
   padding: 10px 2%; }
@@ -310,16 +381,12 @@ footer {
     color: #d8680f; }
   footer p, footer ul li a {
     color: white;
-    font-size: 1.4em;
+    font-size: 1rem;
     line-height: 150%; }
   footer ul li a:hover {
     color: #d9d9d9; }
   footer .phone {
     font-family: oswald, Arial, "Helvetica Neue", Helvetica, sans-serif; }
-
-img.right-image {
-  float: right;
-  width: 33%; }
 
 .mail-thanks {
   min-height: 400px;
@@ -328,32 +395,35 @@ img.right-image {
     float: left; }
 
 @media only screen and (max-width: 1026px) {
+  nav {
+    line-height: 3rem; }
+
   .span4.logo, .span4.affiliate-links {
     width: 100%; }
     .span4.logo.logo, .span4.logo.affiliate-links, .span4.affiliate-links.logo, .span4.affiliate-links.affiliate-links {
       text-align: center; }
 
-  nav ul {
-    font-size: 1.5em; }
-
-  .info-box p, .info-box footer ul li a, footer ul li .info-box a {
-    font-size: 1.3em; } }
+  .side-nav {
+    min-height: 0;
+    width: 100%;
+    margin-bottom: 1%; }
+    .side-nav ul li {
+      display: inline;
+      padding-right: 5%;
+      border-bottom: none;
+      font-size: .9rem; } }
 @media only screen and (max-width: 797px) {
-  h2, h3 {
-    font-size: 2.5em; }
-
-  h3 {
-    font-size: 1.7em; }
-
-  p, footer ul li a {
-    font-size: 1.5em; }
-
   nav {
-    text-align: left;
-    line-height: 4em; }
+    text-align: left; }
     nav ul li {
       padding-left: 0;
       padding-right: 20px; }
+
+  .side-nav ul li {
+    font-size: .9rem; }
+
+  .too-small {
+    display: none; }
 
   .info-box {
     width: 32%; }
@@ -362,12 +432,9 @@ img.right-image {
     min-height: 150px; } }
 @media only screen and (max-width: 629px) {
   nav {
-    line-height: 3em;
     text-align: center; }
-    nav ul {
-      font-size: 1.3em; }
-      nav ul li {
-        padding-right: 25px; }
+    nav ul li {
+      padding-right: 25px; }
 
   .span2 {
     width: 100%;
@@ -398,18 +465,11 @@ img.right-image {
     width: 100%; }
 
   .mail-thanks {
-    width: 100%;
     text-align: center; }
 
   .footerbox {
     margin-bottom: 20px; } }
 @media only screen and (max-width: 509px) {
-  h2, h3 {
-    font-size: 2em; }
-
-  p, footer ul li a {
-    font-size: 1.2em; }
-
   .logo img {
     width: 280px; }
 
@@ -417,8 +477,12 @@ img.right-image {
     display: none; }
 
   nav {
-    line-height: 2em; }
-    nav ul {
-      font-size: 1.2em; }
-      nav ul li {
-        padding-right: 10px; } }
+    line-height: 2rem;
+    font-size: .8rem; }
+    nav ul li {
+      padding-right: 10px; }
+
+  .side-nav ul {
+    display: none; }
+  .side-nav select {
+    display: inline-block; } }

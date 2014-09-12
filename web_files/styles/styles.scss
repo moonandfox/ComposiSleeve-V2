@@ -1,14 +1,11 @@
 
-@import "partials/base.scss";
-@import "partials/grid.scss";
+
 @import "partials/_mixins-functions.scss";
 @import "partials/css-resets.scss";
+@import "partials/base.scss";
+@import "partials/grid.scss";
 @import "partials/slideshow.scss";
 @import "partials/mail-form.scss";
-
-html{
-	font-size: 16px;
-}
 
 body{
 	font-size: 62.5%;
@@ -18,29 +15,38 @@ body{
 }
 
 h1{
-	font-size: em(30);
+	font-size: 3rem;
 }
 
 h2{
 	font-family: $headline-font;
 	text-transform: uppercase;
-	font-size: 3em;
+	font-size: 2rem;
 	line-height: 150%;
 }
 
 h3{
 	@extend h2;
-	font-size: 2em;
+	font-size: 1.4rem;
 }
 
 p{
-	font-size: 1.7em;
+	font-size: 1rem;
 	line-height: 120%;
+}
+
+a{
+  color: #d8680f;
+}
+
+//line height for every ul except in nav
+:not(nav) > ul{
+  line-height: 150%;
 }
 
 a.color-link{
 	color: $color-text;
-	font-size: 1.5em;
+	font-size: 1rem;
 	font-style: italic;
 	margin-top: 20px;
 	float: right;
@@ -52,8 +58,14 @@ header{
 	padding: 10px $pad;
 }
 
+.emphasis-text{
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: .8rem;
+}
+
 .logo img{
-	width:350px;
+	width: 350px;
 }
 
 .affiliate-links{
@@ -63,11 +75,12 @@ header{
 nav{
 	background-color: $bg-dark;
 	text-align: right;
-	padding: 10px 15px;
+	padding: 5px 15px;
 	padding-right: 15px;
+  line-height: 2rem;
+  font-size: 1.3rem;
 	ul{
 		font-family: $headline-font;
-		font-size: 2em;
 		text-transform: uppercase;
 		li{
 			display: inline;
@@ -85,6 +98,13 @@ nav{
 .content-section{
 	@extend %clearfix;
 	padding: 1% $content-padding .5% $content-padding;
+	ul{
+		font-size: 1rem;
+	}
+}
+
+ul.content-list{
+  font-size: 1rem;
 }
 
 .intro{
@@ -103,17 +123,17 @@ nav{
 .info-box{
 	padding-top: 1%;
 	p{
-		font-size: 1.4em;
+		font-size: .9rem;
 	}
 	h3{
 		margin-bottom: 3%;
 	}
 	ul{
-		font-size: 1.4em;
+		font-size: .9rem;
 		li{
 			padding-top: 15px;
 			list-style-position: inside;
-    	text-indent: -0.6em;
+    	text-indent: -0.6rem;
     	&:before{
 				content:'- ';
 			}
@@ -133,6 +153,62 @@ nav{
     border-left: 0px;
 }
 
+img.right-image{
+  float: right;
+  width: 33%;
+}
+
+.side-nav{
+	background-color: #f3f2f2;
+  margin-right: 2%;
+  min-height: 470px;
+  padding: 0% 1%;
+	ul li{
+		padding: 8% 0;
+    border-bottom: 1px solid white;
+    text-transform: uppercase;
+    font-size: .8rem;
+	}
+	a{
+		color: $color-text;
+		&:hover{
+			color: darken($color-text, 15% );
+		}
+	}
+  select{
+    display: none;
+  }
+}
+
+.uses{
+		ul{
+		list-style-type: circle;
+		list-style-position: inside;
+		text-indent: -0.9rem;
+	}
+}
+
+.info-section{
+  padding: 5% 0;
+  border-bottom: 1px dashed $dark-text;
+}
+
+.iframe-container {
+  @extend %clearfix;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 45px;
+  height: 0;
+  overflow: hidden;
+  iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 footer{
 	@extend %clearfix;
 	background-color: $bg-dark;
@@ -143,7 +219,7 @@ footer{
 
 	p{
 		color: $light-text;
-		font-size: 1.4em;
+		font-size: 1rem;
 		line-height: 150%;
 	}
 
@@ -158,11 +234,6 @@ footer{
 	}
 }
 
-img.right-image{
-	float: right;
-	width: 33%;
-	}
-
 .mail-thanks{
 	@extend .centered-page;
 	min-height: 400px;
@@ -172,41 +243,53 @@ img.right-image{
 	}
 }
 
+
+
+//MEDIA QUERIES
 @media only screen and(max-width: $desktop-slim-max-width){
-	.span4.logo, .span4.affiliate-links{
+  nav{
+    line-height: 3rem;
+
+  }
+
+  .span4.logo, .span4.affiliate-links{
 		width: 100%;
 		&.logo, &.affiliate-links{
 			text-align: center;
 		}
 	}
-	nav ul{
-		font-size: 1.5em;
-	}
-	.info-box{
-	p{
-		font-size: 1.3em;
-	}
-}
+
+  .side-nav{
+    min-height: 0;
+    width: 100%;
+    margin-bottom: 1%;
+    ul li{
+      display: inline;
+      padding-right: 5%;
+
+      border-bottom: none;
+      font-size: .9rem;
+    }
+  }
 }
 
 @media only screen and(max-width: $tablet-landscape-max-width){
-	h2{
-		font-size: 2.5em;
-	}
-	h3{
-		font-size: 1.7em;
-	}
-	p{
-		font-size: 1.5em;
-	}
-	nav{
+  nav{
 		text-align: left;
-		line-height: 4em;
 		ul li{
 			padding-left: 0;
 			padding-right: 20px;
 		}
 	}
+
+  .side-nav ul li{
+    font-size: .9rem;
+  }
+
+  .too-small{
+    display: none;
+  }
+
 	.info-box{
 		width: 32%;
 	}
@@ -218,15 +301,12 @@ img.right-image{
 
 @media only screen and (max-width: $mobile-landscape-max-width){
 	nav{
-		line-height: 3em;
 		text-align: center;
-		ul{
-			font-size:1.3em;
-			li{
+		ul li{
 			padding-right: 25px;
 			}
-		}
 	}
+
 	.span2{
 		width: 100%;
 		float: left;
@@ -257,39 +337,46 @@ img.right-image{
 	.info-box:last-child {
     border-bottom: 0;
 	}
+
 	img.right-image{
 		float: none;
 		width: 100%;
 	}
+
 	.mail-thanks{
-		width: 100%;
 		text-align: center;
 	}
+
 	.footerbox{
 		margin-bottom: 20px;
 	}
 }
 
 @media only screen and(max-width: $mobile-portrait-max-width){
-	h2{
-		font-size: 2em;
-	}
-	p{
-		font-size: 1.2em;
-	}
 	.logo img{
-		width:280px;
+		width: 280px;
 	}
+
 	.affiliate-links{
 		display: none;
 	}
+
 	nav{
-		line-height: 2em;
+		line-height: 2rem;
+    font-size: .8rem;
 		ul{
-			font-size:1.2em;
 			li{
 			padding-right: 10px;
 			}
 		}
 	}
+
+  .side-nav{
+    ul{
+      display: none;
+    }
+    select{
+      display: inline-block;
+    }
+  }
 }

@@ -30,3 +30,9 @@
 		float: left;
 	}
 }
+
+@media only screen and(max-width: $mobile-portrait-max-width){
+	#mc_embed_signup{
+		width: 100%;
+  }
+}
